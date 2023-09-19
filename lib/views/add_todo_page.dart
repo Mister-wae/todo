@@ -4,12 +4,11 @@ import 'package:todo_class_work/models/todo.dart';
 import 'package:todo_class_work/views/homepage.dart';
 
 class AddTodoPage extends StatelessWidget {
-  final todoTitle = '';
-  const AddTodoPage({super.key});
+  final TextEditingController todoController = TextEditingController();
+  AddTodoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController todoController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Create Todo"),
@@ -21,13 +20,7 @@ class AddTodoPage extends StatelessWidget {
               };
               Provider.of<TodoData>(context, listen: false)
                   .updateTodoList(todoItem);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const HomePage(),
-                ),
-              );
+              Navigator.pop(context);
             },
             icon: const Icon(Icons.add),
           ),
@@ -36,6 +29,9 @@ class AddTodoPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextField(
+          decoration: const InputDecoration(
+            hintText: "Type here",
+          ),
           controller: todoController,
         ),
       ),
