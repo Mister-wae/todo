@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "741956228223",
+    "project_id": "todo-classwork",
+    "storage_bucket": "todo-classwork.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741956228223:android:89955e2b4b8f576f28db4a",
+        "android_client_info": {
+          "package_name": "com.example.todo_class_work"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHHaux59YJgy6laQx74igBZ-L_a4Q328I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

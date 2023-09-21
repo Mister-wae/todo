@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_class_work/models/todo.dart';
-import 'package:todo_class_work/views/homepage.dart';
 
 class AddTodoPage extends StatelessWidget {
   final TextEditingController todoController = TextEditingController();
@@ -33,6 +32,7 @@ class AddTodoPage extends StatelessWidget {
             hintText: "Type here",
           ),
           controller: todoController,
+          maxLines: null,
         ),
       ),
     );

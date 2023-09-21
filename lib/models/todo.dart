@@ -10,11 +10,15 @@ class Todo {
 class TodoData with ChangeNotifier {
   List<Todo> todoList = [];
   List<Todo> donetodoList = [];
-
+  Set<String> todoListTitles = {};
   void updateTodoList(Map<String, dynamic> item) {
     todoList.add(
       Todo(title: item["title"], isCompleted: false),
     );
+
+    for (var todo in todoList) {
+      todoListTitles.add(todo.title);
+    }
     notifyListeners();
   }
 
